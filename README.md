@@ -1,4 +1,6 @@
-# url-shortner
+# URL Shortner
+
+This project aims to solve a very simple issue: make an url shorter.
 
 ### Getting started
 
