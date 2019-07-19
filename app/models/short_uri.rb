@@ -1,0 +1,2 @@
+class ShortUri < ApplicationRecord
+end
