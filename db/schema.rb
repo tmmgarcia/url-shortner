@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_19_033934) do
+ActiveRecord::Schema.define(version: 2019_07_19_045550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "short_uris", force: :cascade do |t|
     t.string "original_uri", null: false
-    t.string "short_uri", null: false
+    t.string "path", null: false
     t.integer "times_clicked", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
