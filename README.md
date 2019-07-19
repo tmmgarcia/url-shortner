@@ -25,3 +25,4 @@ I have used the following resources to base this project's development
 * https://www.railscarma.com/blog/technical-articles/simple-way-shorten-long-urls-rails/
 * https://nickjanetakis.com/blog/dockerize-a-rails-5-postgres-redis-sidekiq-action-cable-app-with-docker-compose
 * https://hackernoon.com/dockerizing-an-existing-rails-postgresql-app-with-docker-compose-a30a7e1b3f40
+* https://thoughtbot.com/blog/testing-and-environment-variables
