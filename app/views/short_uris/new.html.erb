@@ -1,13 +1,13 @@
 <h2>Enter an url</h2>
 
 <%= form_for @short_uri, url: { action: "create" } do |f| %>
-
+  <p><i>Remember to include http or https</i></p>
   <% if @short_uri.errors.any? %>
     <% @short_uri.errors.full_messages.each do |msg| %>
       <p style='color: darkred;'><%= msg %></p>
     <% end %>
   <% end %>
 
-  <%= f.text_field :original_uri %>
+  <%= f.text_field :original_uri, placeholder: "add your link here" %>
   <%= f.submit "Shorten!" %>
 <% end %>
