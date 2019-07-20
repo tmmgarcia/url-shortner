@@ -19,7 +19,7 @@ module ShortUris
 
     def success?
       raise_if_short_uri_is_nil!
-      short_uri.id.to_i.positive?
+      short_uri.id.present?
     end
 
     private
