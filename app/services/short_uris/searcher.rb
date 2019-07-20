@@ -2,16 +2,19 @@ module ShortUris
   class Searcher
     extend Dry::Initializer
 
+    attr_reader :short_uri
+
     option :path, type: Dry::Types["strict.string"]
 
     def call
-      path_exists?
+      short_uri_exists?
     end
 
     private
 
-    def path_exists?
-      ShortUri.where(filters).exists?
+    def short_uri_exists?
+      @short_uri ||= ShortUri.find_by(filters)
+      short_uri.present?
     end
 
     def filters
