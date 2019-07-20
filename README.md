@@ -4,7 +4,12 @@ This project aims to solve a very simple issue: make an url shorter.
 
 ### Getting started
 
-You might need to login on Docker before you download an image from DockerHub
+##### Running Docker
+
+You might need to login on Docker before you download an image from DockerHub.
+
+First of all, configure `.env.sample` file according to your needs but there isn't any issue if you don't change it.
+Open your shell and go to the project's root folder. Run the following command:
 
 ```
 cp .env.sample .env &&
@@ -14,8 +19,16 @@ docker-compose run --rm app rake db:migrate &&
 docker-compose up
 ```
 
+##### Running Locally
+
+Running this project locally is possible, but time-consuming when compared to Docker.
+Make sure you have `Postgres:10.5` and `ruby:2.6.3` adequately installed and configured.
+You might also need to import the environment variables from `.env.sample` to your project.
+This [website](http://railsapps.github.io/rails-environment-variables.html) has good references for how you can do it.
+When everything is configured, you can run the following command.
+
 ```
-docker-compose run --rm app rails c
+rails s
 ```
 
 ### References
@@ -26,3 +39,4 @@ I have used the following resources to base this project's development
 * https://nickjanetakis.com/blog/dockerize-a-rails-5-postgres-redis-sidekiq-action-cable-app-with-docker-compose
 * https://hackernoon.com/dockerizing-an-existing-rails-postgresql-app-with-docker-compose-a30a7e1b3f40
 * https://thoughtbot.com/blog/testing-and-environment-variables
+* https://stackoverflow.com/a/32968918/5171758
