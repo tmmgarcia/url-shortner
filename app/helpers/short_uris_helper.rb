@@ -1,0 +1,2 @@
+module ShortUrisHelper
+end
