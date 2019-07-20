@@ -19,6 +19,21 @@ docker-compose run --rm app rake db:migrate &&
 docker-compose up
 ```
 
+###### Debuging
+
+If you need to debug something on the application just type:
+
+```
+docker attach url-shortner-app
+
+###### Console
+
+You can access the application console using:
+
+```
+docker-compose run --rm app rails c
+```
+
 ##### Running Locally
 
 Running this project locally is possible, but time-consuming when compared to Docker.
