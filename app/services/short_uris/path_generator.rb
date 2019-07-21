@@ -7,7 +7,14 @@ module ShortUris
     private
 
     def generate_path
-      SecureRandom.urlsafe_base64(ENV.fetch("PATH_LENGTH").to_i)
+      service = Paths::GetAvailable.new
+      service.call
+      populate_available_path if service.populate_needed?
+      service.path
+    end
+
+    def populate_available_path
+      PathPopulateWorker.new.perform
     end
   end
 end
