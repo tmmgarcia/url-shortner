@@ -47,6 +47,19 @@ When everything is configured, you can run the following command.
 rails s
 ```
 
+### Usage
+
+1) Access main page
+2) Click on `click here!` link
+3) Type your url at field
+4) Click on `Shorten`
+5) Get the generated path
+6) Click on the generated path
+7) Close the new window created
+8) Type on your navigation bar and paste the path copied at the step 5
+9) Hit enter
+10) Boom! You were redirected
+
 ### References
 
 I have used the following resources to base this project's development
