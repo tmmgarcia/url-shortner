@@ -66,7 +66,8 @@ rails s
 2) Fully Dockerized
 3) Small services with single responsability - SOLID
 4) Clean Layout
-5) Test coverage
+5) DRY initializer usage
+6) Test coverage
 
 ### Desired Improvements
 
