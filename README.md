@@ -16,6 +16,7 @@ cp .env.sample .env &&
 docker-compose pull &&
 docker-compose run --rm app rake db:create &&
 docker-compose run --rm app rake db:migrate &&
+docker-compose run --rm sidekiq rake populate:available_path_list &&
 docker-compose up
 ```
 
