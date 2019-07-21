@@ -76,6 +76,7 @@ rails s
 3) Add user login
 4) Allow users to see a list of generated links
 5) Add support to i18n
+6) Reduce image size
 
 ### Bugs
 
