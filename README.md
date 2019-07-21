@@ -40,7 +40,7 @@ docker-compose run --rm app rails c
 Running this project locally is possible, but time-consuming when compared to Docker.
 Make sure you have `Postgres:10.5` and `ruby:2.6.3` adequately installed and configured.
 You might also need to import the environment variables from `.env.sample` to your project.
-This [website](http://railsapps.github.io/rails-environment-variables.html) has good references for how you can do it.
+This [website](http://railsapps.github.io/rails-environment-variables.html) has good references about how you can do it.
 When everything is configured, you can run the following command.
 
 ```
