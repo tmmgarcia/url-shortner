@@ -1,9 +1,13 @@
-<h2>Hey! This the URI shortener service!</h2>
-
-<p>
-  To shorten an url <%= link_to 'click here!', new_short_uri_url %>
-  <br>
-  To access a previously shorted url:
-  <br>
-  <%= link_to "#{@host_name}/created-path", "/" %>
-</p>
+<div class="columns">
+  <div class="column is-6">
+    <p>
+      To shorten an url <%= link_to 'click here!', new_short_uri_url %>
+    </p>
+  </div>
+  <div class="column is-6">
+    <p>
+      To access a previously shorted url:
+      <%= link_to "#{@host_name}/created-path", "/" %>
+    </p>
+  </div>
+</div>

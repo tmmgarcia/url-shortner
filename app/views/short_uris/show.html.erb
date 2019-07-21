@@ -1,12 +1,26 @@
-<h2>This is your shorted URL</h2>
-
-<p>
-  <strong>Original URL</strong>:
-  <%= @short_uri.original_uri %>
-  <br>
-  <strong>Path</strong>:
-  <%= link_to @short_uri.path, @short_uri.original_uri, target: '_blank' %>
-  <br>
-  <strong>Times Clicked</strong>:
-  <%= @short_uri.times_clicked %>
-</p>
+<div class="columns">
+  <div class="column">
+    <h3 class="title is-3">This is your shorted URL</h3>
+    <h4 class="subtitle is-4">Check out more info below<h4>
+  </div>
+</div>
+<div class="columns is-vcentered">
+  <div class="column">
+    <p>
+      <strong>Original URL</strong>:
+      <%= @short_uri.original_uri %>
+    </p>
+  </div>
+  <div class="column">
+    <p>
+      <strong>Path</strong>:
+      <%= link_to @short_uri.path, @short_uri.original_uri, target: '_blank' %>
+    </p>
+  </div>
+  <div class="column">
+    <p>
+      <strong>Times Clicked</strong>:
+      <%= @short_uri.times_clicked %>
+    </p>
+  </div>
+</div>

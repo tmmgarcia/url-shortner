@@ -1,13 +1,29 @@
-<h2>Enter an url</h2>
-
-<%= form_for @short_uri, url: { action: "create" } do |f| %>
-  <p><i>Remember to include http or https</i></p>
+<div class="columns">
+  <div class="column">
+    <h3 class="title is-3">Enter a valid URL</h3>
+    <h4 class="subtitle is-4">Remember to include http or https<h4>
+  </div>
+</div>
+<div class="columns">
   <% if @short_uri.errors.any? %>
-    <% @short_uri.errors.full_messages.each do |msg| %>
-      <p style='color: darkred;'><%= msg %></p>
-    <% end %>
+    <div class="column">
+      <% @short_uri.errors.full_messages.each do |msg| %>
+        <p class="help is-danger"><%= msg %></p>
+      <% end %>
+    </div>
   <% end %>
-
-  <%= f.text_field :original_uri, placeholder: "add your link here" %>
-  <%= f.submit "Shorten!" %>
-<% end %>
+</div>
+<div class="columns">
+  <div class="column">
+    <%= form_for @short_uri, url: { action: "create" } do |f| %>
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <%= f.text_field :original_uri, placeholder: "add your link here", class: "input" %>
+        </p>
+        <p class="control">
+          <%= f.submit "Shorten!", class: "button is-primary" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>

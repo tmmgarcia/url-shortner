@@ -5,13 +5,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <center>
-      <%= yield %>
-    </center>
+    <section class="hero is-small is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <p class="title is-2">URL Shortener Service</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
   </body>
 </html>
