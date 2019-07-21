@@ -7,13 +7,17 @@ RSpec.describe ShortUris::PathGenerator, type: :service do
     it { expect(subject.call).to be_truthy }
 
     context 'with mocked SecureRandom' do
-      let(:expected_path) { 'RANDOM' }
+      let(:mocked) { double(populate_needed?: false, path: 'RANDOM') }
 
       before do
-        allow(SecureRandom).to receive(:urlsafe_base64).and_return(expected_path)
+        allow_any_instance_of(Paths::GetAvailable).to receive_messages(
+          call: mocked.path,
+          path: mocked.path,
+          populate_needed?: mocked.populate_needed?
+        )
       end
 
-      it { expect(subject.call).to eq(expected_path) }
+      it { expect(subject.call).to eq(mocked.path) }
     end
   end
 end
