@@ -9,6 +9,16 @@ This project aims to solve a very simple issue: make an url shorter.
 You might need to login on Docker before you download an image from DockerHub.
 
 First of all, configure `.env.sample` file according to your needs but there isn't any issue if you don't change it.
+
+You might need to install all gem dependencies depending on the images you have on your computer.
+
+```
+cp .env.sample .env &&
+docker-compose pull &&
+docker-compose run --rm app bundle install &&
+docker-compose run --rm sidekiq bundle install
+```
+
 Open your shell and go to the project's root folder. Run the following command:
 
 ```
