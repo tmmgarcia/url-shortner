@@ -60,6 +60,26 @@ rails s
 9) Hit enter
 10) Boom! You were redirected
 
+### Hightlights
+
+1) Cache System Sidekiq + Redis
+2) Fully Dockerized
+3) Small services with single responsability - SOLID
+4) Clean Layout
+5) Test coverage
+
+### Desired Improvements
+
+1) Add a captcha verification to avoid robot attacks
+2) Add a configuration to release to production
+3) Add user login
+4) Allow users to see a list of generated links
+5) Add support to i18n
+
+### Bugs
+
+1) The URL form breaks when an user inserts an invalid url
+
 ### References
 
 I have used the following resources to base this project's development
