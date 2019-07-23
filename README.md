@@ -36,6 +36,7 @@ If you need to debug something on the application just type:
 
 ```
 docker attach url-shortner-app
+```
 
 ###### Console
 
